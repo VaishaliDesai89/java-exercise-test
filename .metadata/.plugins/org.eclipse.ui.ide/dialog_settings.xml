@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/Users/vdesa4/java-exercise-test/com.qa.testautomation.ebay.new-master-v2 2 3"/>
+		<item value="/Users/vdesa4/java-exercise-test/com.qa.testautomation"/>
+	</list>
+	<section name="CleanDialogSettings">
+		<item value="484" key="DIALOG_WIDTH"/>
+		<item value="false" key="TOGGLE_SELECTED"/>
+		<item value="378" key="DIALOG_HEIGHT"/>
+		<item value="312" key="DIALOG_X_ORIGIN"/>
+		<item value="204" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="ExternalProjectImportWizard">
+	</section>
+</section>

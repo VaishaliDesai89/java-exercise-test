@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun selenium.test.TestRunner" project="test" tests="7" started="7" failures="0" errors="2" ignored="0">
+  <testsuite name="selenium.test.TestRunner" time="6.135">
+    <testsuite name="Feature: Search results where one can sort, filter and see details of resulting products" time="6.135">
+      <testsuite name="Scenario Outline: Search and verify results" time="6.135">
+        <testsuite name="Examples:" time="6.135">
+          <testsuite name="| BL54BNB | Lowest price | Highest price |" time="6.135" incomplete="true">
+            <error>java.lang.Error: Unresolved compilation problem: 
+	The method vehicleDetails() is undefined for the type HomePage
+
+	at selenium.test.stepdefs.MyStepdefs.iGetAPageWithVehicleDetails(MyStepdefs.java:47)
+	at ✽.Then I get a page with vehicle details showing colour and make(src/main/java/selenium/test/features/SearchResults.feature:13)
+
+</error>
+            <testcase name="Given I am a non-registered customer" classname="| BL54BNB | Lowest price | Highest price |" time="0.625"/>
+            <testcase name="And I navigate to &quot;www.gov.uk/get-vehicle-information-from-dvla&quot;" classname="| BL54BNB | Lowest price | Highest price |" time="4.048"/>
+            <testcase name="When I click on &quot;Start now&quot; button" classname="| BL54BNB | Lowest price | Highest price |" time="0.006"/>
+            <testcase name="Then I get a page to enter vehicle registration number" classname="| BL54BNB | Lowest price | Highest price |" time="0.084"/>
+            <testcase name="When I search for an item &quot;BL54BNB&quot;" classname="| BL54BNB | Lowest price | Highest price |" time="1.369"/>
+            <testcase name="And I click on &quot;Continue&quot; button" classname="| BL54BNB | Lowest price | Highest price |" time="0.001"/>
+            <testcase name="Then I get a page with vehicle details showing colour and make" classname="| BL54BNB | Lowest price | Highest price |" time="0.002">
+              <error>java.lang.Error: Unresolved compilation problem: 
+	The method vehicleDetails() is undefined for the type HomePage
+
+	at selenium.test.stepdefs.MyStepdefs.iGetAPageWithVehicleDetails(MyStepdefs.java:47)
+	at ✽.Then I get a page with vehicle details showing colour and make(src/main/java/selenium/test/features/SearchResults.feature:13)
+
+</error>
+            </testcase>
+          </testsuite>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

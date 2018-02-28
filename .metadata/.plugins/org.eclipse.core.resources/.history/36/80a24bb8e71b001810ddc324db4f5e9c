@@ -1,0 +1,110 @@
+package selenium.test.stepdefs;
+
+import cucumber.api.java.Before;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import junit.framework.Assert;
+import selenium.test.pages.HomePage;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import static selenium.test.DriverSetup.driverSetup;
+
+public class MyStepdefs {
+    public RemoteWebDriver driver;
+
+    @Before
+    public void init() throws Throwable {
+    	System.out.println("First Step def");
+        driver = driverSetup();
+    }
+
+    @And("^I navigate to \"([^\"]*)\"$")
+    public void iNavigateTo(String url) throws Throwable {
+        new HomePage(driver).goToPage(url);
+    }
+    
+    @When("^I click on \"([^\"]*)\" button$")
+    public void iClickOnButton(String buttonText) throws Throwable {
+        new HomePage(driver).clickOnButton(buttonText);
+    }
+   
+    @Then("^I get a page to enter vehicle registration number$")
+    public void iGetPageToInputVehicleRegistrationNumber() throws Throwable {
+    		new HomePage(driver).checkCurrentPageUrl("https://vehicleenquiry.service.gov.uk/");
+    }
+    
+    @When("^I search for an item \"([^\"]*)\"$")
+    public void iSearchForAnItem(String searchTerm) throws Throwable {
+        new HomePage(driver).searchForAnItem(searchTerm);
+    } 
+  
+    @Then("^I get a page with vehicle details showing colour and make$")
+    public void iGetAPageWithVehicleDetails() throws Throwable {
+    	 	new HomePage(driver).checkVehicleDetails("Toyota","Black");
+    	 	new HomePage(driver).readFromCSV("vehicle-data.xls","www.gov.uk/get-vehicle-information-from-dvla");
+    }
+    
+    @Then("^I get a list of matching results for \"([^\"]*)\"$")
+    public void iGetAListOfMatchingResultsFor(String searchTerm) throws Throwable {
+        new HomePage(driver).checkForSearchedTermFromResults(searchTerm);
+    }
+
+    @And("^the resulting \"([^\"]*)\" items cards show: postage price, No of bids, price or show BuyItNow tag$")
+    public void theResultingItemsCardsShowPostagePriceNoOfBidsPriceOrShowBuyItNowTag(String searchTerm) throws Throwable {
+        new HomePage(driver).checkAttributesOfEachItemInResult(searchTerm);
+    }
+
+    @Then("^I can sort the results by \"([^\"]*)\"$")
+    public void iCanSortTheResultsBy(String order) throws Throwable {
+        new HomePage(driver).selectSortOrder(order);
+    }
+
+    @And("^the \"([^\"]*)\" results are listed in the page in the \"([^\"]*)\" order$")
+    public void theResultsAreListedInThePageInTheOrder(String searchTerm, String order) throws Throwable {
+        new HomePage(driver).checkSortResultByLowestPrice(searchTerm,order);
+    }
+
+    @Then("^I can filter the results by \"([^\"]*)\"$")
+    public void iCanFilterTheResultsBy(String filter) throws Throwable {
+        new HomePage(driver).filterResults(filter);
+    }
+
+    @And("^all the \"([^\"]*)\" results shown in the page have the Buy it now tag$")
+    public void allTheResultsShownInThePageHaveTheBuyItNowTag(String searchTerm) throws Throwable {
+        new HomePage(driver).checkBuyItNowTagOnFilteredResults(searchTerm);
+        driver.quit();
+    }
+
+    @After
+    public void cleanUp(){
+        driver.quit();
+    }
+
+    @When("^I enter a search term \"([^\"]*)\" and select a specific Category \"([^\"]*)\"$")
+    public void iEnterASearchTermAndSelectASpecificCategory(String searchTerm, String category) throws Throwable {
+        new HomePage(driver).selectCategoryHomeAndBeauty(category);
+        new HomePage(driver).searchForAnItem(searchTerm);
+    }
+
+    @And("^I can verify that the \"([^\"]*)\" results shown as per the the selected category \"([^\"]*)\"$")
+    public void iCanVerifyThatTheResultsShownAsPerTheTheSelectedCategory(String searchTerm, String category) throws Throwable {
+        new HomePage(driver).verifyCategoryInResults(searchTerm,category);
+        driver.quit();
+    }
+
+    @And("^the results for \"([^\"]*)\" show more than one page$")
+    public void theResultsForShowMoreThanOnePage(String searchTerm) throws Throwable {
+        new HomePage(driver).verifyPagesForResults(searchTerm);
+    }
+
+    @Then("^the user can navigate through the pages to continue looking at the \"([^\"]*)\" items$")
+    public void theUserCanNavigateThroughThePagesToContinueLookingAtTheItems(String searchTerm) throws Throwable {
+        new HomePage(driver).navigateToDifferentPagesAndLookForResults(searchTerm);
+        
+    }
+}

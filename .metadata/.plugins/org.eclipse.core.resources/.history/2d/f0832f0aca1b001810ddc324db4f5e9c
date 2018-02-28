@@ -1,0 +1,21 @@
+package ebay.qa.testautomation;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+public class DriverSetup {
+	protected static RemoteWebDriver driver;
+	private static DesiredCapabilities capabilities = null;
+	private static long TIMEOUT=60;
+
+	public static RemoteWebDriver driverSetup() throws Throwable {
+		driver = new ChromeDriver();
+		return driver;
+	}
+
+	public static long getTimeout() {
+		return DriverSetup.TIMEOUT;
+	}
+}

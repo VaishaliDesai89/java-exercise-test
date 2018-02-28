@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun selenium.test.TestRunner" project="test" tests="6" started="6" failures="2" errors="0" ignored="0">
+  <testsuite name="selenium.test.TestRunner" time="2.478">
+    <testsuite name="Feature: Search results where one can sort, filter and see details of resulting products" time="2.478">
+      <testsuite name="Scenario: Search and verify results" time="2.478" incomplete="true">
+        <failure>
+          <expected>toyota</expected>
+          <actual>mini</actual>junit.framework.ComparisonFailure: expected:&lt;[toyota]&gt; but was:&lt;[mini]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at selenium.test.pages.HomePage.checkVehicleDetails(HomePage.java:59)
+	at selenium.test.stepdefs.MyStepdefs.iGetAPageWithVehicleDetails(MyStepdefs.java:45)
+	at ✽.Then I get a page with vehicle details showing colour and make(src/main/java/selenium/test/features/SearchResults.feature:12)
+
+</failure>
+        <testcase name="When I navigate to &quot;www.gov.uk/get-vehicle-information-from-dvla&quot;" classname="Scenario: Search and verify results" time="0.982"/>
+        <testcase name="And I click on &quot;Start now&quot; button" classname="Scenario: Search and verify results" time="0.006"/>
+        <testcase name="Then I get a page to enter vehicle registration number" classname="Scenario: Search and verify results" time="0.076"/>
+        <testcase name="When I search for an item &quot;OV64EKE&quot;" classname="Scenario: Search and verify results" time="1.382"/>
+        <testcase name="And I click on &quot;Continue&quot; button" classname="Scenario: Search and verify results" time="0.029"/>
+        <testcase name="Then I get a page with vehicle details showing colour and make" classname="Scenario: Search and verify results" time="0.002">
+          <failure>
+            <expected>toyota</expected>
+            <actual>mini</actual>junit.framework.ComparisonFailure: expected:&lt;[toyota]&gt; but was:&lt;[mini]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at selenium.test.pages.HomePage.checkVehicleDetails(HomePage.java:59)
+	at selenium.test.stepdefs.MyStepdefs.iGetAPageWithVehicleDetails(MyStepdefs.java:45)
+	at ✽.Then I get a page with vehicle details showing colour and make(src/main/java/selenium/test/features/SearchResults.feature:12)
+
+</failure>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

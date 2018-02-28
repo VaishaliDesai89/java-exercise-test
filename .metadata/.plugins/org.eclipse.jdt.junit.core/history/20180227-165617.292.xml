@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun selenium.test.TestRunner" project="test" tests="7" started="7" failures="0" errors="0" ignored="0">
+  <testsuite name="selenium.test.TestRunner" time="4.49">
+    <testsuite name="Feature: Search results where one can sort, filter and see details of resulting products" time="4.49">
+      <testsuite name="Scenario Outline: Search and verify results" time="4.49">
+        <testsuite name="Examples:" time="4.49">
+          <testsuite name="| BL54BNB | Lowest price | Highest price |" time="4.49">
+            <testcase name="Given I am a non-registered customer" classname="| BL54BNB | Lowest price | Highest price |" time="0.617"/>
+            <testcase name="And I navigate to &quot;www.gov.uk/get-vehicle-information-from-dvla&quot;" classname="| BL54BNB | Lowest price | Highest price |" time="2.133"/>
+            <testcase name="When I click on &quot;Start now&quot; button" classname="| BL54BNB | Lowest price | Highest price |" time="0.007"/>
+            <testcase name="Then I get a page to enter vehicle registration number" classname="| BL54BNB | Lowest price | Highest price |" time="0.08"/>
+            <testcase name="When I search for an item &quot;BL54BNB&quot;" classname="| BL54BNB | Lowest price | Highest price |" time="1.588"/>
+            <testcase name="And I click on &quot;Continue&quot; button" classname="| BL54BNB | Lowest price | Highest price |" time="0.058"/>
+            <testcase name="Then I get a page with vehicle details showing colour and make" classname="| BL54BNB | Lowest price | Highest price |" time="0.007"/>
+          </testsuite>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

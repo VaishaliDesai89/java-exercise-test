@@ -1,0 +1,5 @@
+package selenium.test;
+
+public @interface CucumberOptions {
+
+}

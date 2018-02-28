@@ -1,0 +1,15 @@
+@001
+
+Feature: Search results where one can sort, filter and see details of resulting products
+
+  Scenario: Search and verify results
+
+    #Given I am a non-registered customer
+    When I navigate to "www.gov.uk/get-vehicle-information-from-dvla"
+    And I click on "Start now" button
+    Then I get a page to enter vehicle registration number
+    When I search for an item "<search_term>"
+    And I click on "Continue" button
+    Then I get a page with vehicle details showing colour and make
+    
+    

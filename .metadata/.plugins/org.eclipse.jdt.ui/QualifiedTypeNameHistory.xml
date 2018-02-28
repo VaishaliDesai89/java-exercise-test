@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="java.net.URLConnection"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+<fullyQualifiedTypeName name="com.gargoylesoftware.htmlunit.javascript.host.Console"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeOptions"/>
+<fullyQualifiedTypeName name="test.qa.testautomation.DriverSingleton"/>
+</qualifiedTypeNameHistroy>

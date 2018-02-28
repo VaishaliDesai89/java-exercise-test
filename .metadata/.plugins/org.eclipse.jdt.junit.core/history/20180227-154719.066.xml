@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun selenium.test.TestRunner" project="test" tests="6" started="6" failures="2" errors="0" ignored="0">
+  <testsuite name="selenium.test.TestRunner" time="1.881">
+    <testsuite name="Feature: Search results where one can sort, filter and see details of resulting products" time="1.881">
+      <testsuite name="Scenario Outline: Search and verify results" time="1.881">
+        <testsuite name="Examples:" time="1.881">
+          <testsuite name="| BL54BNB | Lowest price | Highest price |" time="1.881" incomplete="true">
+            <failure>junit.framework.AssertionFailedError: No button found
+	at junit.framework.Assert.fail(Assert.java:57)
+	at selenium.test.pages.HomePage.clickOnButton(HomePage.java:42)
+	at selenium.test.stepdefs.MyStepdefs.iClickOnButton(MyStepdefs.java:31)
+	at ✽.When I click on "continue" button(src/main/java/selenium/test/features/SearchResults.feature:12)
+
+</failure>
+            <testcase name="Given I am a non-registered customer" classname="| BL54BNB | Lowest price | Highest price |" time="0.602"/>
+            <testcase name="And I navigate to &quot;www.gov.uk/get-vehicle-information-from-dvla&quot;" classname="| BL54BNB | Lowest price | Highest price |" time="1.194"/>
+            <testcase name="When I click on &quot;Start now&quot; button" classname="| BL54BNB | Lowest price | Highest price |" time="0.006"/>
+            <testcase name="Then I get a page to enter vehicle registration number" classname="| BL54BNB | Lowest price | Highest price |" time="0.077"/>
+            <testcase name="When I search for an item &quot;BL54BNB&quot;" classname="| BL54BNB | Lowest price | Highest price |" time="0.001"/>
+            <testcase name="When I click on &quot;continue&quot; button" classname="| BL54BNB | Lowest price | Highest price |" time="0.001">
+              <failure>junit.framework.AssertionFailedError: No button found
+	at junit.framework.Assert.fail(Assert.java:57)
+	at selenium.test.pages.HomePage.clickOnButton(HomePage.java:42)
+	at selenium.test.stepdefs.MyStepdefs.iClickOnButton(MyStepdefs.java:31)
+	at ✽.When I click on "continue" button(src/main/java/selenium/test/features/SearchResults.feature:12)
+
+</failure>
+            </testcase>
+          </testsuite>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

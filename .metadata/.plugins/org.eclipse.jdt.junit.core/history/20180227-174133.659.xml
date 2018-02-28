@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun selenium.test.TestRunner" project="test" tests="7" started="7" failures="2" errors="0" ignored="0">
+  <testsuite name="selenium.test.TestRunner" time="2.083">
+    <testsuite name="Feature: Search results where one can sort, filter and see details of resulting products" time="2.083">
+      <testsuite name="Scenario Outline: Search and verify results" time="2.083">
+        <testsuite name="Examples:" time="2.083">
+          <testsuite name="| BL54BNB | Lowest price | Highest price |" time="2.083" incomplete="true">
+            <failure>
+              <expected>Toyota</expected>
+              <actual>TOYOTA</actual>junit.framework.ComparisonFailure: expected:&lt;T[oyota]&gt; but was:&lt;T[OYOTA]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at selenium.test.pages.HomePage.checkVehicleDetails(HomePage.java:58)
+	at selenium.test.stepdefs.MyStepdefs.iGetAPageWithVehicleDetails(MyStepdefs.java:47)
+	at ✽.Then I get a page with vehicle details showing colour and make(src/main/java/selenium/test/features/SearchResults.feature:13)
+
+</failure>
+            <testcase name="Given I am a non-registered customer" classname="| BL54BNB | Lowest price | Highest price |" time="0.674"/>
+            <testcase name="And I navigate to &quot;www.gov.uk/get-vehicle-information-from-dvla&quot;" classname="| BL54BNB | Lowest price | Highest price |" time="1.007"/>
+            <testcase name="When I click on &quot;Start now&quot; button" classname="| BL54BNB | Lowest price | Highest price |" time="0.005"/>
+            <testcase name="Then I get a page to enter vehicle registration number" classname="| BL54BNB | Lowest price | Highest price |" time="0.078"/>
+            <testcase name="When I search for an item &quot;BL54BNB&quot;" classname="| BL54BNB | Lowest price | Highest price |" time="0.287"/>
+            <testcase name="And I click on &quot;Continue&quot; button" classname="| BL54BNB | Lowest price | Highest price |" time="0.029"/>
+            <testcase name="Then I get a page with vehicle details showing colour and make" classname="| BL54BNB | Lowest price | Highest price |" time="0.003">
+              <failure>
+                <expected>Toyota</expected>
+                <actual>TOYOTA</actual>junit.framework.ComparisonFailure: expected:&lt;T[oyota]&gt; but was:&lt;T[OYOTA]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at selenium.test.pages.HomePage.checkVehicleDetails(HomePage.java:58)
+	at selenium.test.stepdefs.MyStepdefs.iGetAPageWithVehicleDetails(MyStepdefs.java:47)
+	at ✽.Then I get a page with vehicle details showing colour and make(src/main/java/selenium/test/features/SearchResults.feature:13)
+
+</failure>
+            </testcase>
+          </testsuite>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

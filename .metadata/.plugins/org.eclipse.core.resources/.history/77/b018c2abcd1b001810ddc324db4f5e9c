@@ -1,0 +1,16 @@
+package selenium.test;
+
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+
+@CucumberOptions(plugin = {"json:build/cucumber.json"},
+features = {"src/main/java/ebay/qa/testautomation/features/SearchResults.feature"},
+glue= {"ebay.qa.testautomation","stepdefs"}
+)
+
+public class TestRunner {
+	
+}

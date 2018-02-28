@@ -1,0 +1,146 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1556840863,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MyStepdefs.init()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Search and verify results",
+        "description": "",
+        "id": "search-results-where-one-can-sort,-filter-and-see-details-of-resulting-products;search-and-verify-results",
+        "after": [
+          {
+            "result": {
+              "duration": 77939626,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MyStepdefs.cleanUp()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 693902639,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I navigate to \"www.gov.uk/get-vehicle-information-from-dvla\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "www.gov.uk/get-vehicle-information-from-dvla",
+                  "offset": 15
+                }
+              ],
+              "location": "MyStepdefs.iNavigateTo(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3950813575,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click on \"Start now\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Start now",
+                  "offset": 12
+                }
+              ],
+              "location": "MyStepdefs.iClickOnButton(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5873721,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I get a page to enter vehicle registration number",
+            "match": {
+              "location": "MyStepdefs.iGetPageToInputVehicleRegistrationNumber()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 74516196,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I search for an item \"OV64EKE\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "OV64EKE",
+                  "offset": 22
+                }
+              ],
+              "location": "MyStepdefs.iSearchForAnItem(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 263562829,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I click on \"Continue\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Continue",
+                  "offset": 12
+                }
+              ],
+              "location": "MyStepdefs.iClickOnButton(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5584818827,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I get a page with vehicle details showing colour and make",
+            "match": {
+              "location": "MyStepdefs.iGetAPageWithVehicleDetails()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Search results where one can sort, filter and see details of resulting products",
+    "description": "",
+    "id": "search-results-where-one-can-sort,-filter-and-see-details-of-resulting-products",
+    "keyword": "Feature",
+    "uri": "src/main/java/selenium/test/features/SearchResults.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@001"
+      }
+    ]
+  }
+]

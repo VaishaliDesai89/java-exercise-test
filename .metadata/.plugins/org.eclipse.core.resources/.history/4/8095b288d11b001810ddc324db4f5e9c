@@ -1,0 +1,47 @@
+@001
+
+Feature: Search results where one can sort, filter and see details of resulting products
+
+  Scenario Outline: Search and verify results
+
+    Given I am a non-registered customer
+    And I navigate to "www.gov.uk/get-vehicle-information-from-dvla"
+    When I click on "Start now" button
+    #When I search for an item "<search_term>"
+    #Then I get a list of matching results for "<search_term>"
+    #And the resulting "<search_term>" items cards show: postage price, No of bids, price or show BuyItNow tag
+    #Then I can sort the results by "<lowest_price_order>"
+    #And the "<search_term>" results are listed in the page in the "Lowest price" order
+    #Then I can sort the results by "<highest_price_order>"
+    #Then I can filter the results by "Buy it now"
+    #And all the "<search_term>" results shown in the page have the Buy it now tag
+
+    Examples:
+      | search_term |lowest_price_order|highest_price_order|
+      |tea          |Lowest price      |Highest price      |
+
+#@002
+  #Scenario Outline: Search per category
+#
+    #Given I am a non-registered customer
+    #And I navigate to "www.ebay.co.uk"
+    #When I enter a search term "<search_term>" and select a specific Category "<category>"
+    #Then I can verify that the "<search_term>" results shown as per the the selected category "<category>"
+  #Examples:
+    #| search_term | category |
+    #| coffee      | Art      |
+#
+#
+#@003
+  #Scenario Outline: Search and navigate through results pages
+#
+    #Given I am a non-registered customer
+    #And I navigate to "www.ebay.co.uk"
+    #When I search for an item "<search_term>"
+    #Then I get a list of matching results for "<search_term>"
+    #And the results for "<search_term>" show more than one page
+    #Then the user can navigate through the pages to continue looking at the "<search_term>" items
+#
+  #Examples:
+    #| search_term |
+    #| breakfast   |

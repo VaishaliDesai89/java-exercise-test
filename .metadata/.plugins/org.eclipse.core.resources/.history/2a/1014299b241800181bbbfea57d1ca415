@@ -1,0 +1,68 @@
+package junitgrouptest;
+
+import java.io.File;
+
+import org.junit.Test;
+public class ScanFolder {
+	final String directoryPath ="//src/vehicle-information";
+    /**
+     * List all the files and folders from a directory
+     * @param directoryName to be listed
+     */
+	
+	@Test
+    public void listFilesAndFolders(){
+        File directory = new File(directoryPath);
+        //get all the files from a directory
+        File[] fList = directory.listFiles();
+        for (File file : fList){
+            System.out.println(file.getName());
+        }
+    }
+    
+//	@Test
+//    public void listFiles(){
+//        File directory = new File(directoryPath);
+//        //get all the files from a directory
+//        File[] fList = directory.listFiles();
+//        for (File file : fList){
+//            if (file.isFile()){
+//                System.out.println(file.getName());
+//            }
+//        }
+//    }
+//    
+//
+//	@Test
+//    public void listFolders(){
+//        File directory = new File(directoryPath);
+//        //get all the files from a directory
+//        File[] fList = directory.listFiles();
+//        for (File file : fList){
+//            if (file.isDirectory()){
+//                System.out.println(file.getName());
+//            }
+//        }
+//    }
+//    
+//
+//	@Test
+//    public void listFilesAndFilesSubDirectories(){
+//        File directory = new File(directoryPath);
+//        //get all the files from a directory
+//        File[] fList = directory.listFiles();
+//        for (File file : fList){
+//            if (file.isFile()){
+//                System.out.println(file.getAbsolutePath());
+//            } else if (file.isDirectory()){
+//                listFilesAndFilesSubDirectories();
+//            }
+//        }
+//    }
+	
+//    public static void main (String[] args){
+//        ScanFolder scanFolder = new ScanFolder();
+//        
+//        scanFolder.listFiles(directory);
+//    }
+}

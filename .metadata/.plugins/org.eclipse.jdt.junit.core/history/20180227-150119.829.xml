@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner (2)" project="test" tests="11" started="11" failures="0" errors="9" ignored="8">
+  <testsuite name="selenium.test.TestRunner" time="0.018">
+    <testsuite name="Feature: Search results where one can sort, filter and see details of resulting products" time="0.018">
+      <testsuite name="Scenario Outline: Search and verify results" time="0.002">
+        <testsuite name="Examples:" time="0.002">
+          <testsuite name="| tea | Lowest price | Highest price |" time="0.002" incomplete="true">
+            <error>java.lang.IllegalStateException: The driver executable does not exist: /Users/vdesa4/java-exercise-test/test/resouces/chromedriver.exe
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:136)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:131)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:339)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at selenium.test.DriverSetup.driverSetup(DriverSetup.java:18)
+	at selenium.test.stepdefs.MyStepdefs.nonRegisteredUser(MyStepdefs.java:19)
+	at ✽.Given I am a non-registered customer(src/main/java/selenium/test/features/SearchResults.feature:7)
+
+java.lang.NullPointerException
+	at selenium.test.stepdefs.MyStepdefs.cleanUp(MyStepdefs.java:65)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
+	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+
+</error>
+            <testcase name="Given I am a non-registered customer" classname="| tea | Lowest price | Highest price |" time="0.002">
+              <error>java.lang.IllegalStateException: The driver executable does not exist: /Users/vdesa4/java-exercise-test/test/resouces/chromedriver.exe
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:136)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:131)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:339)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at selenium.test.DriverSetup.driverSetup(DriverSetup.java:18)
+	at selenium.test.stepdefs.MyStepdefs.nonRegisteredUser(MyStepdefs.java:19)
+	at ✽.Given I am a non-registered customer(src/main/java/selenium/test/features/SearchResults.feature:7)
+
+</error>
+            </testcase>
+          </testsuite>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Scenario Outline: Search per category" time="0.005">
+        <testsuite name="Examples:" time="0.005">
+          <testsuite name="| coffee | Art |" time="0.002" incomplete="true">
+            <error>java.lang.IllegalStateException: The driver executable does not exist: /Users/vdesa4/java-exercise-test/test/resouces/chromedriver.exe
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:136)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:131)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:339)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at selenium.test.DriverSetup.driverSetup(DriverSetup.java:18)
+	at selenium.test.stepdefs.MyStepdefs.nonRegisteredUser(MyStepdefs.java:19)
+	at ✽.Given I am a non-registered customer(src/main/java/selenium/test/features/SearchResults.feature:25)
+
+java.lang.NullPointerException
+	at selenium.test.stepdefs.MyStepdefs.cleanUp(MyStepdefs.java:65)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
+	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+
+</error>
+            <testcase name="Given I am a non-registered customer" classname="| coffee | Art |" time="0.002">
+              <error>java.lang.IllegalStateException: The driver executable does not exist: /Users/vdesa4/java-exercise-test/test/resouces/chromedriver.exe
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:136)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:131)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:339)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at selenium.test.DriverSetup.driverSetup(DriverSetup.java:18)
+	at selenium.test.stepdefs.MyStepdefs.nonRegisteredUser(MyStepdefs.java:19)
+	at ✽.Given I am a non-registered customer(src/main/java/selenium/test/features/SearchResults.feature:25)
+
+</error>
+            </testcase>
+            <testcase name="And I navigate to &quot;www.ebay.co.uk&quot;" classname="| coffee | Art |" time="0.002" ignored="true"/>
+            <testcase name="When I enter a search term &quot;coffee&quot; and select a specific Category &quot;Art&quot;" classname="| coffee | Art |" time="0.0" ignored="true"/>
+            <testcase name="Then I can verify that the &quot;coffee&quot; results shown as per the the selected category &quot;Art&quot;" classname="| coffee | Art |" time="0.001" ignored="true"/>
+          </testsuite>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Scenario Outline: Search and navigate through results pages" time="0.004">
+        <testsuite name="Examples:" time="0.004">
+          <testsuite name="| breakfast |" time="0.001" incomplete="true">
+            <error>java.lang.IllegalStateException: The driver executable does not exist: /Users/vdesa4/java-exercise-test/test/resouces/chromedriver.exe
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:136)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:131)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:339)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at selenium.test.DriverSetup.driverSetup(DriverSetup.java:18)
+	at selenium.test.stepdefs.MyStepdefs.nonRegisteredUser(MyStepdefs.java:19)
+	at ✽.Given I am a non-registered customer(src/main/java/selenium/test/features/SearchResults.feature:37)
+
+java.lang.NullPointerException
+	at selenium.test.stepdefs.MyStepdefs.cleanUp(MyStepdefs.java:65)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
+	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+
+</error>
+            <testcase name="Given I am a non-registered customer" classname="| breakfast |" time="0.0">
+              <error>java.lang.IllegalStateException: The driver executable does not exist: /Users/vdesa4/java-exercise-test/test/resouces/chromedriver.exe
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:136)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:131)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:339)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at selenium.test.DriverSetup.driverSetup(DriverSetup.java:18)
+	at selenium.test.stepdefs.MyStepdefs.nonRegisteredUser(MyStepdefs.java:19)
+	at ✽.Given I am a non-registered customer(src/main/java/selenium/test/features/SearchResults.feature:37)
+
+</error>
+            </testcase>
+            <testcase name="And I navigate to &quot;www.ebay.co.uk&quot;" classname="| breakfast |" time="0.0" ignored="true"/>
+            <testcase name="When I search for an item &quot;breakfast&quot;" classname="| breakfast |" time="0.003" ignored="true"/>
+            <testcase name="Then I get a list of matching results for &quot;breakfast&quot;" classname="| breakfast |" time="0.0" ignored="true"/>
+            <testcase name="And the results for &quot;breakfast&quot; show more than one page" classname="| breakfast |" time="0.0" ignored="true"/>
+            <testcase name="Then the user can navigate through the pages to continue looking at the &quot;breakfast&quot; items" classname="| breakfast |" time="0.0" ignored="true"/>
+          </testsuite>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

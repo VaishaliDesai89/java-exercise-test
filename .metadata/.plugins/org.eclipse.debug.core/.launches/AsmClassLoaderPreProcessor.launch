@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="net.sf.cglib.transform.hook.AsmClassLoaderPreProcessor"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.qa.testautomation.ebay.new-master-v2 2 3"/>
+</launchConfiguration>

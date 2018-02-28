@@ -1,0 +1,31 @@
+package selenium.test;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import com.gargoylesoftware.htmlunit.javascript.host.Console;
+
+public class DriverSetup {
+	protected static ChromeDriver driver;
+	private static long TIMEOUT=60;
+
+	public static ChromeDriver driverSetup() throws Throwable {
+		System.setProperty("webdriver.chrome.driver", "test/resouces/chromedriver.exe");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("disable-infobars");
+		options.addArguments("--start-maximized");
+		driver = new ChromeDriver(options);
+		System.out.println(driver);
+		return driver;
+	}
+
+	public static long getTimeout() {
+		return DriverSetup.TIMEOUT;
+	}
+	
+	protected void launchDriver() throws Exception {
+		System.setProperty("webdriver.chrome.driver", "/Users/vdesa4/java-exercise-test");
+		driver = new ChromeDriver();
+	}
+}

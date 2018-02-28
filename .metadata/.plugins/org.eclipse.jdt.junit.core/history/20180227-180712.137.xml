@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner (2)" project="test" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="selenium.test.TestRunner" time="9.969">
+    <testsuite name="Feature: Search results where one can sort, filter and see details of resulting products" time="9.969">
+      <testsuite name="Scenario: Search and verify results" time="9.969">
+        <testcase name="When I navigate to &quot;www.gov.uk/get-vehicle-information-from-dvla&quot;" classname="Scenario: Search and verify results" time="3.951"/>
+        <testcase name="And I click on &quot;Start now&quot; button" classname="Scenario: Search and verify results" time="0.007"/>
+        <testcase name="Then I get a page to enter vehicle registration number" classname="Scenario: Search and verify results" time="0.074"/>
+        <testcase name="When I search for an item &quot;OV64EKE&quot;" classname="Scenario: Search and verify results" time="0.264"/>
+        <testcase name="And I click on &quot;Continue&quot; button" classname="Scenario: Search and verify results" time="5.584"/>
+        <testcase name="Then I get a page with vehicle details showing colour and make" classname="Scenario: Search and verify results" time="0.088"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

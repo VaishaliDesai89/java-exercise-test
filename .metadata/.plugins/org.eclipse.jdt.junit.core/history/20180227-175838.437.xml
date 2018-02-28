@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun selenium.test.TestRunner" project="test" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="selenium.test.TestRunner" time="19.404">
+    <testsuite name="Feature: Search results where one can sort, filter and see details of resulting products" time="19.404">
+      <testsuite name="Scenario Outline: Search and verify results" time="19.404">
+        <testsuite name="Examples:" time="19.404">
+          <testsuite name="| BL54BNB | Lowest price | Highest price |" time="19.404">
+            <testcase name="When I navigate to &quot;www.gov.uk/get-vehicle-information-from-dvla&quot;" classname="| BL54BNB | Lowest price | Highest price |" time="0.927"/>
+            <testcase name="And I click on &quot;Start now&quot; button" classname="| BL54BNB | Lowest price | Highest price |" time="0.006"/>
+            <testcase name="Then I get a page to enter vehicle registration number" classname="| BL54BNB | Lowest price | Highest price |" time="0.082"/>
+            <testcase name="When I search for an item &quot;BL54BNB&quot;" classname="| BL54BNB | Lowest price | Highest price |" time="0.286"/>
+            <testcase name="And I click on &quot;Continue&quot; button" classname="| BL54BNB | Lowest price | Highest price |" time="18.018"/>
+            <testcase name="Then I get a page with vehicle details showing colour and make" classname="| BL54BNB | Lowest price | Highest price |" time="0.085"/>
+          </testsuite>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,286 @@
+package selenium.test.pages;
+
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import junit.framework.Assert;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+
+
+public class HomePage {
+
+    protected RemoteWebDriver driver;
+    protected List<WebElement> information,results,resultCardTitles;
+    protected WebElement make,colour;
+    protected int offset = 500;
+
+    public HomePage(RemoteWebDriver driver) {
+        this.driver = driver;
+
+    }
+
+    public RemoteWebDriver goToPage(String url){
+        driver.get("https://" + url);
+        return driver;
+    }
+    
+    public RemoteWebDriver clickOnButton(String buttonText) {
+    	switch(buttonText) {
+    	case "Continue":
+    		driver.findElement(By.name(buttonText)).click();
+    		break;
+    	case "Start now":
+    		driver.findElement(By.linkText(buttonText)).click();
+    		break;
+    	default:
+    		Assert.fail("No button found");
+    		break;
+    	}
+    	return driver;
+    }
+    
+    public RemoteWebDriver vehicleDetails() {
+    		make = driver.findElement(By.xpath("//*[@id='pr3']/div/ul/li[2]/span[2]/strong"));
+    		colour = driver.findElement(By.xpath("//*[@id='pr3']/div/ul/li[3]/span[2]/strong"));
+    		System.out.println(make.getText());
+    		System.out.println(colour.getText());
+		return driver;
+    }
+
+    public RemoteWebDriver enterSearchTerm(String searchTerm) {
+        driver.findElement(By.id("Vrm")).sendKeys(searchTerm);
+        return driver;
+    }
+    
+    public RemoteWebDriver checkCurrentPageUrl(String url) {
+        Assert.assertEquals(url, driver.getCurrentUrl());
+        return driver;
+    }
+
+    public RemoteWebDriver searchForAnItem(String searchTerm) {
+        enterSearchTerm(searchTerm);
+        return driver;
+    }
+    
+    public RemoteWebDriver readFromCSV(String fileName) {
+    	try {
+            FileInputStream file = new FileInputStream(new File("/Users/vdesa4/java-exercise-test/java-test-1/src/vehicle-information/"+fileName));
+
+            //Create Workbook instance holding reference to .xlsx file
+            HSSFWorkbook workbook = new HSSFWorkbook(file);
+
+            //Get first/desired sheet from the workbook
+            HSSFSheet sheet = workbook.getSheetAt(0);
+
+            //Iterate through each rows one by one
+            Iterator<Row> rowIterator = sheet.iterator();
+            while (rowIterator.hasNext())
+            {
+                Row row = rowIterator.next();
+                Cell cell = cellIterator.next();
+                System.out.println(cell.getStringCellValue());
+                //For each row, iterate through all the columns
+//                Iterator<Cell> cellIterator = row.cellIterator();
+//
+//                while (cellIterator.hasNext()) 
+//                {
+//                    Cell cell = cellIterator.next();
+//                    //Check the cell type and format accordingly
+//                    switch (cell.getCellType()) 
+//                    {
+//                        case Cell.CELL_TYPE_NUMERIC:
+//                            System.out.print(cell.getNumericCellValue() + "\t");
+//                            break;
+//                        case Cell.CELL_TYPE_STRING:
+//                            System.out.print(cell.getStringCellValue() + "\t");
+//                            break;
+//                    }
+//                }
+                System.out.println("");
+            }
+            file.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    		return driver;
+    }
+
+    public List<WebElement> getResultsForSearchedTerm(String searchTerm) {
+        results = driver.findElement(By.id("ListViewInner")).findElements(By.tagName("li"));
+        return results;
+    }
+
+    public RemoteWebDriver checkForSearchedTermFromResults(String searchTerm) {
+        resultCardTitles = driver.findElement(By.id("ListViewInner")).findElements(By.tagName("h3"));
+        for(WebElement resultCardTitle: resultCardTitles)
+        {
+            Assert.assertTrue("The result card title "+resultCardTitle.getText()+ " doesn't contain the search term",resultCardTitle.getText().toLowerCase().contains(searchTerm.toLowerCase()));
+        }
+        return driver;
+    }
+
+    public RemoteWebDriver checkPriceOnResultantCard(List<WebElement> results){
+        for(WebElement result: results)
+        {
+            if(!result.getAttribute("id").isEmpty())
+            {
+                Assert.assertTrue(result.findElement(By.xpath("//*[@id='"+ result.getAttribute("id")+"']/ul[1]/li[1][contains(@class,'lvprice prc')]")).isDisplayed());
+                offset = offset + result.getSize().height;
+                ((JavascriptExecutor) driver).executeScript("scroll("+offset+","+offset+")");
+            }
+        }
+        offset = 500;
+        return driver;
+    }
+
+    public RemoteWebDriver checkPostagePriceOnResultantCard(List<WebElement> results){
+        for(WebElement result: results)
+        {
+            if(!result.getAttribute("id").isEmpty())
+            {
+                Assert.assertTrue(result.findElement(By.xpath("//*[@id='"+ result.getAttribute("id")+"']/ul[1]/li[3][contains(@class,'lvshipping')]")).isDisplayed());
+            }
+        }
+        return driver;
+    }
+
+    public RemoteWebDriver checkBuyNowOnResultantCard(List<WebElement> results) {
+        for(WebElement result: results)
+        {
+            if(!result.getAttribute("id").isEmpty())
+            {
+                Assert.assertTrue(result.findElement(By.xpath("//*[@id='"+ result.getAttribute("id")+"']/ul[1]/li[2]/span/span[contains(@class,'logoBin')]")).isDisplayed());
+            }
+        }
+        return driver;
+    }
+
+    public RemoteWebDriver checkBidOnResultantCard(List<WebElement> results) {
+        for(WebElement result: results)
+        {
+            if(!result.getAttribute("id").isEmpty())
+            {
+                WebElement bid = result.findElement(By.xpath("//*[@id='"+ result.getAttribute("id")+"']/ul[1]/li[2][contains(@class,'lvformat')]"));
+                Assert.assertTrue(bid.isDisplayed());
+            }
+        }
+        return driver;
+    }
+
+
+    public RemoteWebDriver checkAttributesOfEachItemInResult(String searchTerm) {
+        results = getResultsForSearchedTerm(searchTerm);
+        System.out.println("Checking price for resultant card");
+        driver = checkPriceOnResultantCard(results);
+        System.out.println("Checking Buy Now tag for resultant card");
+        driver = checkBuyNowOnResultantCard(results);
+        System.out.println("Checking postage price for resultant card");
+        driver = checkPostagePriceOnResultantCard(results);
+        System.out.println("Checking bid for resultant card");
+        driver = checkBidOnResultantCard(results);
+        return driver;
+    }
+
+    public RemoteWebDriver checkSortResultByLowestPrice(String searchTerm, String order) {
+        List<Float> priceLists = new ArrayList<Float>();
+        String price;
+        results = getResultsForSearchedTerm(searchTerm);
+
+        for(WebElement result: results)
+        {
+            if(!result.getAttribute("id").isEmpty())
+            {
+                price = result.findElement(By.xpath("//*[@id='"+ result.getAttribute("id")+"']/ul[1]/li[1][contains(@class,'lvprice prc')]")).getText();
+                priceLists.add(Float.parseFloat(price.substring(1,4)));
+                offset = offset + result.getSize().height;
+                ((JavascriptExecutor) driver).executeScript("scroll("+offset+","+offset+")");
+            }
+        }
+
+        List<Float> sortedPriceLists = new ArrayList<Float>(priceLists);
+//        switch ( order ) {
+//            case "Lowest price":
+//                Collections.sort(sortedPriceLists);
+//                Assert.assertEquals("Price is not sorted in low to higher price order",priceLists,sortedPriceLists);
+//                break;
+//            case "Highest price":
+//                Collections.reverse(sortedPriceLists);
+//                Assert.assertEquals("Price is not sorted in high to lower price order",priceLists,sortedPriceLists);
+//                break;
+//            default:
+//                break;
+//        }
+        offset = 500;
+        return driver;
+    }
+
+    public RemoteWebDriver selectSortOrder(String order) {
+        driver.findElement(By.id("DashSortByContainer")).click();
+//        switch (order){
+//            case "Lowest price":
+//                driver.findElement(By.xpath("//*[@id=\"SortMenu\"]/li[4]/a")).click();
+//                break;
+//            case "Highest price":
+//                driver.findElement(By.xpath("//*[@id=\"SortMenu\"]/li[4]/a")).click();
+//                break;
+//            default:
+//                break;
+//        }
+        return driver;
+    }
+
+    public RemoteWebDriver filterResults(String filter) {
+        driver.findElement(By.linkText("Buy it now")).click();
+        return driver;
+    }
+
+    public RemoteWebDriver checkBuyItNowTagOnFilteredResults(String searchTerm) {
+        results = driver.findElement(By.id("ListViewInner")).findElements(By.tagName("li"));
+        checkBuyNowOnResultantCard(results);
+        return driver;
+    }
+
+    public RemoteWebDriver selectCategoryHomeAndBeauty(String category) {
+        Select categoryDropdown = new Select(driver.findElement(By.id("gh-cat")));
+        categoryDropdown.selectByVisibleText(category);
+        return driver;
+    }
+
+    public RemoteWebDriver verifyCategoryInResults(String searchTerm,String category) {
+        Assert.assertTrue(driver.getTitle().toLowerCase().contains((searchTerm + " in " + category).toLowerCase()));
+        return driver;
+    }
+
+    public RemoteWebDriver verifyPagesForResults(String searchTerm) {
+        List<WebElement> pages = driver.findElement(By.className("pages")).findElements(By.tagName("a"));
+        Assert.assertTrue("There is no more than a page available for searched term",pages.size()>1);
+        return driver;
+    }
+
+    public RemoteWebDriver navigateToDifferentPagesAndLookForResults(String searchTerm){
+        List<WebElement> pages = driver.findElement(By.className("pages")).findElements(By.tagName("a"));
+        results = getResultsForSearchedTerm(searchTerm);
+        checkPriceOnResultantCard(results);
+        for(WebElement page: pages) {
+            results = getResultsForSearchedTerm(searchTerm);
+            checkPriceOnResultantCard(results);
+            driver.findElement(By.className("pagn-next")).click();
+        }
+        return driver;
+    }
+}

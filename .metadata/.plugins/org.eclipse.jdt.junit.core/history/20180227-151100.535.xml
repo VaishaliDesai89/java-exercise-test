@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun selenium.test.TestRunner" project="test" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="selenium.test.TestRunner" time="0.328">
+    <testsuite name="Feature: Search results where one can sort, filter and see details of resulting products" time="0.328">
+      <testsuite name="Scenario Outline: Search and verify results" time="0.328">
+        <testsuite name="Examples:" time="0.328">
+          <testsuite name="| tea | Lowest price | Highest price |" time="0.328">
+            <testcase name="Given I am a non-registered customer" classname="| tea | Lowest price | Highest price |" time="0.243"/>
+            <testcase name="And I navigate to &quot;https://www.gov.uk/get-vehicle- information-from- dvla&quot;" classname="| tea | Lowest price | Highest price |" time="0.085"/>
+          </testsuite>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>
